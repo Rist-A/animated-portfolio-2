@@ -1,44 +1,105 @@
-import { CONTACT } from "../constants"
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import mail from "../assets/Mail/mail.png";
+import telegram from "../assets/tg/telegram.png";
+import linkedin from "../assets/ld/linkedin.png";
+import x from "../assets/x/x.png";
+import github from "../assets/git/github.png";
+import instagram from "../assets/insta/instagram.png";
+
 
 export default function Contact() {
-    return (
-        <div className='border-b border-neutral-900 pb-20'>
-            <motion.h1
-                className='my-10 text-center text-4xl'
-                whileInView={{ y: 0, opacity: 1 }}
-                initial={{ y: -100, opacity: 0 }}
-                transition={{ duration: 1 }}
-            >
-                Get in touch
-            </motion.h1>
-            <div className='text-center tracking-tighter'>
-                <motion.p
-                    className='my-4'
-                    whileInView={{ x: 0, opacity: 1 }}
-                    initial={{ x: -100, opacity: 0 }}
-                    transition={{ duration: 1.5 }}
-                >
-                    {CONTACT.address}
-                </motion.p>
-                <motion.p
-                    className="my-4"
-                    whileInView={{ x: 0, opacity: 1 }}
-                    initial={{ x: 100, opacity: 0 }}
-                    transition={{ duration: 1.5 }}
-                >
-                    {CONTACT.phoneNo}
-                </motion.p>
-                <motion.a
-                    href="#"
-                    className="border-b"
-                    whileInView={{ y: 0, opacity: 1 }}
-                    initial={{ x: 0, opacity: 0 }}
-                    transition={{ duration: 1.5, delay: 1.5 }}
-                >
-                    {CONTACT.email}
-                </motion.a>
-            </div>
-        </div>
-    )
+
+
+  return (
+    <div className="border-b border-neutral-900 pb-20">
+      <motion.h1
+        className="my-10 text-center text-4xl"
+        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: -100, opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Connect with Me
+      </motion.h1>
+      <div className="text-center tracking-tighter">
+        <motion.div
+          className="my-8 flex justify-center space-x-6"
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: -100, opacity: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <a
+            href="https://www.instagram.com/_.rist_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition transform hover:scale-125 hover:shadow-lg"
+          >
+            <img
+              className="w-10 h-10 rounded-full bg-white p-1"
+              src={instagram}
+              alt="Instagram"
+            />
+          </a>
+          <a
+            href="https://github.com/Rist-A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition transform hover:scale-125 hover:shadow-lg"
+          >
+            <img
+              className="w-10 h-10 rounded-full bg-white p-1"
+              src={github}
+              alt="GitHub"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/wubrist-alemu-457b40279/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition transform hover:scale-125 hover:shadow-lg"
+          >
+            <img
+              className="w-10 h-10 rounded-full bg-white p-1"
+              src={linkedin}
+              alt="LinkedIn"
+            />
+          </a>
+          <a
+            href="mailto:ristwubrist@gmail.com"
+            className="transition transform hover:scale-125 hover:shadow-lg"
+          >
+            <img
+              className="w-10 h-10 rounded-full bg-white p-1"
+              src={mail}
+              alt="Email"
+            />
+          </a>
+          <a
+            href="https://t.me/rist_621"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition transform hover:scale-125 hover:shadow-lg"
+          >
+            <img
+              className="w-10 h-10 rounded-full bg-white p-1"
+              src={telegram}
+              alt="Telegram"
+            />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition transform hover:scale-125 hover:shadow-lg"
+          >
+            <img
+              className="w-10 h-10 rounded-full bg-white p-1"
+              src={x}
+              alt="Twitter"
+            />
+          </a>
+        </motion.div>
+      </div>
+  
+    </div>
+  );
 }

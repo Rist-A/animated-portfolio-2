@@ -2,71 +2,128 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import hrental from "../assets/houseproject1/hrental.png";
+import houseproject from "../assets/housrproject2/houseproject .png"
+import pcdemo1 from "../assets/pcdemo1/pcdemo1.png"
+import pcdemo2 from "../assets/pcdemo2/pcdemo2.png"
+import paintapp1 from "../assets/paintapp1/paintapp1.jpg"
+import painnt from "../assets/paint3/painnt.webp"
+import github from "../assets/git/github.png"
+import rating from "../assets/Rating/rating.gif"
+import Project1 from "../components/Project1";
+import Project2 from "../components/Project2";
+import Project3 from "../components/Project3";
+import { BrowserRouter } from "react-router-dom";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
-export const EXPERIENCES = [
+export const SKILLS = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    Title: "React.js",
+    Proficiency: "Expert in Component-Based Frontend Development",
+    Level: "High",
+    description: `Highly skilled in developing performant and reusable components using React.js. Proficient in state management, hooks, context API, and integrating modern libraries.`,
+    technologies: ["95%"],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    Title: "HTML5",
+    Proficiency: "Expert in Advanced HTML Development",
+    Level: "High",
+    description: `I have advanced expertise in HTML, capable of creating fully structured, standards-compliant, and responsive web pages. With a strong understanding of HTML5 features, I craft optimized, semantic, and accessible code for engaging user interfaces.`,
+    technologies: ["95%"],
   },
   {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+    Title: "CSS3",
+    Proficiency: "Master of Responsive Styling and Layouts",
+    Level: "High",
+    description: `Skilled in designing visually appealing, responsive, and cross-browser compatible web pages using CSS3. Proficient in advanced styling techniques, animations, and grid/flexbox layouts.`,
+    technologies: ["85%"],
   },
   {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    Title: "JavaScript",
+    Proficiency: "Dynamic and Interactive Web Development",
+    Level: "High",
+    description: `Experienced in creating dynamic and interactive web applications with JavaScript. Proficient in ES6+ features, DOM manipulation, event handling, and functional programming principles.`,
+    technologies: ["85%"],
+  },
+  {
+    Title: "C#",
+    Proficiency: "Expert in Object-Oriented Programming",
+    Level: "High",
+    description: `Experienced in developing scalable applications with C#. Proficient in object-oriented programming principles, .NET framework, and modern backend solutions.`,
+    technologies: ["90%"],
+  },
+
+  {
+    Title: "ASP.NET",
+    Proficiency: "Master in Modern Web Application Development",
+    Level: "High",
+    description: `Highly experienced in building scalable and secure web applications with ASP.NET. Proficient in MVC architecture, Web API, and advanced .NET features.`,
+    technologies: ["98%"],
+  },
+  {
+    Title: "Bootstrap",
+    Proficiency: "Expert in Rapid UI Prototyping",
+    Level: "High",
+    description: `Skilled in building responsive, mobile-first web designs using Bootstrap. Proficient in customizing components and themes to deliver polished user interfaces.`,
+    technologies: ["87%"],
+  },
+  {
+    Title: "Tailwind CSS",
+    Proficiency: "Pro in Utility-First Styling",
+    Level: "High",
+    description: `Highly skilled in designing clean, modern, and responsive UIs with Tailwind CSS. Proficient in creating custom themes and components for scalable projects.`,
+    technologies: ["90%"],
   },
 ];
-
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
-    image: project1,
+    title: "Apartment Rental and Sales System",
+    image: hrental,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "A modern property management system designed to streamline apartment rentals and sales. Features include property browsing with advanced filters, secure user authentication, and an admin dashboard for managing listings and transactions. Built with scalability, performance, and security in mind.",
+    technologies: [
+      "ASP.NET Core",
+      "C#",
+      "JWT Authentication",
+      "SQL Server",
+      "Entity Framework",
+      "RESTful Web API"
+    ],
+    giticon:github,
+    gitlink:"https://github.com/Rist-A/Apartment-Management-System-Backend.git",
+    rateicon:rating,
+    counter:0,
+    Navigate:Project1
+  },
+  
+  {
+    title: "Pc Cleaner Website Demo",
+    image: pcdemo1,
+    description:
+   "I developed a demo website for a PC cleaning service using React and Bootstrap. The website provides detailed information about the services offered and features a user-friendly interface for customers to register for PC cleaning services.",
+    technologies: ["React", "Bootstrap"],
+    giticon:github,
+    gitlink:"https://github.com/Rist-A/my-first-project.git",
+    rateicon:rating,
+    counter:0,
+    Navigate:Project2
   },
   {
-    title: "Task Management App",
-    image: project2,
+    title: "Paint Application",
+    image: painnt,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "A desktop-based Paint Application developed using C# and Windows Forms. This application features a user-friendly interface for drawing, editing, and customizing designs. It includes tools for freehand drawing, shapes, color selection, and other basic editing functionalities.",
+    technologies: ["C#", "Windows Forms"],
+    giticon:github,
+    gitlink:"https://github.com/Rist-A/Basic-painting-app.git",
+    rateicon:rating,
+    counter:0, 
+    Navigate:Project3
   },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-  },
+  
+
 ];
 
 export const CONTACT = {
