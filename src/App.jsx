@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import Contact from "./components/Contact";
+import Connect from "./components/Connect";
 import Experience from "./components/Experience";
 import Head from "./components/Head";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
-import Contactme from "./components/Contactme";
+import Contact from "./components/Contact";
 import sun from "./assets/sun/sun.png"
 import night from "./assets/moon/night.png"
 import Testimonial from "./components/Testimonial"
@@ -47,8 +47,8 @@ function App() {
               <Route path="/technologies" element={<Technologies />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/contactme" element={<Contactme />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/Connect" element={<Connect />} />
             </Routes>
           </div>
           <button
@@ -80,8 +80,8 @@ function Home({ scrollPosition }) {
       <Experience />
       <Projects />
       <Testimonial/>
-      <Contactme />
       <Contact />
+      <Connect />
     </>
   );
 }

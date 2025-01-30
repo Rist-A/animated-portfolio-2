@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import rebiyapic from "../assets/rebiyapic/rebiyapic.jpg"
+
 
 export default function Testimonial() {
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div  className="border-b border-neutral-900 pb-4">
       <motion.h1
         className="my-20 text-center text-4xl"
         whileInView={{ y: 0, opacity: 1 }}
@@ -27,11 +27,7 @@ export default function Testimonial() {
             transition={{ duration: 1.5 }}
           >
            
-            <img
-              src={rebiyapic}
-              alt="Testimonial 1"
-              className="rounded-full w-24 h-24 object-cover mb-4 mx-auto"
-            />
+        
           </motion.div>
           <motion.div
             className="w-full max-w-xl lg:w-3/4"
@@ -40,16 +36,16 @@ export default function Testimonial() {
             transition={{ duration: 1.5 }}
           >
          
-            <h6 className="mb-2 font-semibold">Rebiya Mussema</h6>
+            <h6 className="mb-2 font-semibold">Lemlem Hagos</h6>
             <p className="mb-4 ">
-              "Working with Wubrist on the Property Rental and Sale System project has been a fantastic experience. Wubrist demonstrated a high level of technical proficiency and professionalism throughout the project. They were instrumental in backend development, particularly in implementing secure authentication methods and optimizing the database. "
+              "Arsema has demonstrated remarkable dedication and a strong aptitude for learning programming languages, particularly C++ and Java. Their problem-solving skills, logical thinking, and ability to grasp complex concepts quickly have set them apart in my classes at Addis Ababa University. Arsema's passion for coding and continuous improvement make them a promising programmer with a bright future ahead. "
             </p>
            
             <span className="mr-2 mt-4 rounded bg-neutral-800 px-2 py-1 font-medium text-coral-red">
-              Web Development
+            Instructor
             </span>
             <span className="mr-2 mt-4 rounded bg-neutral-800 px-2 py-1 font-medium text-coral-red">
-              UI/UX Design
+              Addis Ababa University
             </span>
           </motion.div>
         </motion.div>
@@ -76,16 +72,16 @@ export default function Testimonial() {
             transition={{ duration: 1.5 }}
           >
           
-            <h6 className="mb-2 font-semibold">Delil Akmel</h6>
+            <h6 className="mb-2 font-semibold">Getachew kassahun</h6>
             <p className="mb-4 ">
-              "It has been a pleasure teaching Wubrist during their time at high school. Wubrist consistently demonstrated a strong understanding of the subjects they studied, with a particular interest in technology and problem-solving. They stand out as an exceptional student who not only excels in their academic work but also contributes positively to class discussions and group activities."
+              "It has been a pleasure teaching Arsema during their time at high school. Wubrist consistently demonstrated a strong understanding of the subjects they studied, with a particular interest in technology and problem-solving. They stand out as an exceptional student who not only excels in their academic work but also contributes positively to class discussions and group activities."
             </p>
         
             <span className="mr-2 mt-4 rounded bg-neutral-800 px-2 py-1 font-medium text-coral-red">
-               Abel School
+               Director
             </span>
             <span className="mr-2 mt-4 rounded bg-neutral-800 px-2 py-1 font-medium text-coral-red">
-              Director
+              Kids Garden School
             </span>
           </motion.div>
         </motion.div>

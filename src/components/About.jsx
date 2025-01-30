@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function About() {
     return (
-        <div className='border-b border-neutral-900 pb-4'>
+        <div section id="about"className='border-b border-neutral-900 pb-4'>
             <motion.h1
                 className='my-20 text-center text-4xl'
                 whileInView={{ y: 0, opacity: 1 }}
@@ -35,7 +35,7 @@ export default function About() {
                         <div className="flex items-center gap-4">
          
           <div>
-            <h1 className="text-2xl font-bold">Wubrist Alemu</h1>
+            <h1 className="text-2xl font-bold">Arsema Mengistu</h1>
             <p className="text-gray-500">| Creative Developer</p>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function About() {
         
         <div className="mt-6 text-white-700">
           <p>
-            Hello! My name is Wubrist, and I am passionate about developing
+            Hello! My name is Arsema, and I am passionate about developing
             innovative tech solutions to address everyday challenges. Currently,
             I specialize in full-stack web development, with a strong focus on
             backend technologies like ASP.NET and Node.js. My journey in the

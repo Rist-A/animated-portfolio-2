@@ -1,61 +1,54 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Icons for the hamburger menu
-import backimg from "../assets/backimg/backimg.png";
+import { Menu, X } from "lucide-react";
+
 
 export default function Navbar({ isBgWhite }) {
   const [activeNav, setActiveNav] = useState("Home");
-  const [showAll, setShowAll] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
 
-  const navItems = ["Home", "Work", "About", "Skill", "Contact"];
-
-  const routes = {
-    Home: () => navigate("/"),
-    Work: () => navigate("/projects"),
-    About: () => navigate("/about"),
-    Skill: () => navigate("/experience"),
-    Contact: () => navigate("/contact"),
-  };
+  const navItems = ["Home", "About", "Projects", "Skill", "Contact"];
 
   useEffect(() => {
-    if (showAll) {
-      window.scrollTo(0, 0);
-    }
-  }, [showAll]);
+    const handleScroll = () => {
+      let currentSection = "Home";
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.toLowerCase());
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            currentSection = item;
+          }
+        }
+      });
+      setActiveNav(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleNavClick = (item) => {
-    if (item === "Home") {
-      setShowAll(true);
-      setActiveNav("Home");
-      navigate("/");
-    } else {
-      setActiveNav(item);
-      setShowAll(false);
-      routes[item]?.();
-    }
     setIsMenuOpen(false);
-  };
-
-  const handleBack = () => {
-    setShowAll(true);
-    setActiveNav("Home");
-    navigate("/");
+    setTimeout(() => {
+      const section = document.getElementById(item.toLowerCase());
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
   };
 
   return (
     <>
-      <div className={`flex justify-between items-center py-4 shadow-md px-4 ${isBgWhite ? "bg-white text-black" : "bg-neutral-950 text-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"}`}>
+      <div className={`flex justify-between items-center py-4 shadow-md px-4 navbar fixed w-full ${isBgWhite ? "bg-white text-black" : "bg-coral-red-100 text-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"}`}>
         {/* Left Section */}
         <div className="text-[28px] font-montserrat">
-          <a href="#" onClick={() => handleNavClick("Home")}>
-            Home
-          </a>
+          <a href="#" onClick={() => handleNavClick("Home")}>Home</a>
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="lg:hidden ">
+        <div className="lg:hidden">
           {isMenuOpen ? (
             <X size={28} onClick={() => setIsMenuOpen(false)} className="cursor-pointer" />
           ) : (
@@ -92,18 +85,6 @@ export default function Navbar({ isBgWhite }) {
               <a href="#">{item}</a>
             </div>
           ))}
-        </div>
-      )}
-
-      {/* Back button */}
-      {!showAll && activeNav !== "Home" && (
-        <div className="fixed mt-[90px] top-5 left-4">
-          <button
-            onClick={handleBack}
-            className="px-4 py-2 rounded-md shadow-md hover:bg-orange-600 transition duration-200"
-          >
-            <img src={backimg} alt="Back" />
-          </button>
         </div>
       )}
     </>

@@ -114,7 +114,7 @@ export default function Project2() {
             <p>Get the full code here </p>
                 {/* GitHub Icon */}
                 <a
-                  href="https://github.com/Rist-A/my-first-project.git"
+                  href="https://github.com/Arsema212/anim-reposit-arsema-mengistu/blob/main/inner.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:brightness-110 transition-transform transform hover:scale-110"

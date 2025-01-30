@@ -27,7 +27,7 @@ const iconVariants = (duration) => ({
 
 export default function Technologies() {
     return (
-        <div className='border-b border-neutral-800 pb-24'>
+        <div section id="skill" className='border-b border-neutral-800 pb-24'>
             <motion.h1
                 className='my-20 text-center text-4xl'
                 whileInView={{ y: 0, opacity: 1 }}

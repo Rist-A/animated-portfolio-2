@@ -20,6 +20,14 @@ body.light-theme {
   color: black;
 }
 
+/* You can use these styles in your Navbar component directly */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Adjust as necessary */
+}
 
 
 

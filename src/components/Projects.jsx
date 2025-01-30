@@ -29,7 +29,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="relative border-b border-neutral-900 pb-4">
+    <div section id="projects" className="relative border-b border-neutral-900 pb-4">
       <motion.h1
         className="my-20 text-center text-4xl"
         whileInView={{ y: 0, opacity: 1 }}

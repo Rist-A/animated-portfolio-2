@@ -92,7 +92,7 @@ export const PROJECTS = [
       "RESTful Web API"
     ],
     giticon:github,
-    gitlink:"https://github.com/Rist-A/Apartment-Management-System-Backend.git",
+    gitlink:"https://github.com/Arsema212/anim-reposit-arsema-mengistu/blob/main/inner.html",
     rateicon:rating,
     counter:0,
     Navigate:Project1
@@ -105,7 +105,7 @@ export const PROJECTS = [
    "I developed a demo website for a PC cleaning service using React and Bootstrap. The website provides detailed information about the services offered and features a user-friendly interface for customers to register for PC cleaning services.",
     technologies: ["React", "Bootstrap"],
     giticon:github,
-    gitlink:"https://github.com/Rist-A/my-first-project.git",
+    gitlink:"https://github.com/Arsema212/anim-reposit-arsema-mengistu/blob/main/E%20Commerce%20App%20App.htm",
     rateicon:rating,
     counter:0,
     Navigate:Project2
@@ -117,7 +117,7 @@ export const PROJECTS = [
       "A desktop-based Paint Application developed using C# and Windows Forms. This application features a user-friendly interface for drawing, editing, and customizing designs. It includes tools for freehand drawing, shapes, color selection, and other basic editing functionalities.",
     technologies: ["C#", "Windows Forms"],
     giticon:github,
-    gitlink:"https://github.com/Rist-A/Basic-painting-app.git",
+    gitlink:"https://github.com/Arsema212/anim-reposit-arsema-mengistu/blob/main/Paint%20ApplicationFinal.zip",
     rateicon:rating,
     counter:0, 
     Navigate:Project3

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Experience() {
     return (
-        <div className="border-b border-neutral-900 pb-4">
+        <div section id="skill" className="border-b border-neutral-900 pb-4">
             <motion.h1
                 className="my-20 text-center text-4xl"
                 whileInView={{ y: 0, opacity: 1 }}
